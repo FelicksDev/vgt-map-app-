@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViewGreen SOMINDEFA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <div class="map-container">
+      <h1>ViewGreen SOMINDEFA</h1>
+      <div class="controls">
+        <div class="control-group">
+          <label for="data-source">Seleccione una fuente de datos:</label>
+          <select id="data-source">
+            <option value="">Seleccione fuente de datos</option>
+            <option value="nasa-firms">NASA FIRMS</option>
+            <!-- Add other data sources here -->
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="layer">Seleccione una capa:</label>
+          <select id="layer">
+            <option value="">Seleccione una capa</option>
+            <option value="kriging">Interpolación por Kriging</option>
+            <!-- Add other layers here -->
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="markers">Mostrar marcadores</label>
+          <input type="checkbox" id="markers" />
+        </div>
+        <div class="control-group">
+          <label for="heatmap">Mostrar puntos de calor</label>
+          <input type="checkbox" id="heatmap" />
+        </div>
+        <div class="control-group">
+          <label for="opacity">Opacidad</label>
+          <input type="range" id="opacity" min="0" max="100" value="50" />
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
